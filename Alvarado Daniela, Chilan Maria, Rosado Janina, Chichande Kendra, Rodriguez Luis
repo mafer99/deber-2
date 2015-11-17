@@ -1,0 +1,167 @@
+package Deber2;
+import java.time.Clock;
+import sun.util.calendar.BaseCalendar.Date;
+
+public class Productos {
+    private Date FechaDeEmbasado;
+     private  Date FechaDeCaduidad;
+      private int NumeroDeLote;
+       private String PaisDeOrigen;
+
+    public Productos() {
+    }
+  
+       
+       
+
+    public Date getDechaDeEmbasado() {
+        return FechaDeEmbasado;
+    }
+
+    public void setDechaDeEmbasado(Date DechaDeEmbasado) {
+        this.FechaDeEmbasado = DechaDeEmbasado;
+    }
+
+    public Date getFechaDeCaduidad() {
+        return FechaDeCaduidad;
+    }
+
+    public void setFechaDeCaduidad(Date FechaDeCaduidad) {
+        this.FechaDeCaduidad = FechaDeCaduidad;
+    }
+
+    public int getNumeroDeLote() {
+        return NumeroDeLote;
+    }
+
+    public void setNumeroDeLote(int NumeroDeLote) {
+        this.NumeroDeLote = NumeroDeLote;
+    }
+
+    public String getPaisDeOrigen() {
+        return PaisDeOrigen;
+    }
+
+    public void setPaisDeOrigen(String PaisDeOrigen) {
+        this.PaisDeOrigen = PaisDeOrigen;
+    }
+       
+    
+    public static void main(String[] args) { 
+         Productos_frescos profres= new Productos_frescos();
+         profres.ProducFrescos();
+         
+          System.out.println("");
+          
+          Productos_refrigerados prorefri = new Productos_refrigerados();
+          prorefri.ProducRefrigerados();
+       
+        Productos_congelados conge1= new Productos_congelados();
+         conge1.agua();
+         conge1.aire();
+         conge1.nitrogeno();
+         conge1.productosCongelados();
+         System.out.println("");
+         
+         
+        
+    }
+    --------
+    public class Productos_congelados extends Productos {
+     private double temperatura_de_manteniemiento;
+
+    public Productos_congelados() {
+    }
+public void productosCongelados(){
+         System.out.println("Produsctos congelados");
+        System.out.println("12/10/2015");
+         System.out.println("12/12/2015");
+          System.out.println("67");
+           System.out.println("Ecuador"); 
+    
+}
+    public Productos_congelados(double temperatura_de_manteniemiento) {
+        this.temperatura_de_manteniemiento = temperatura_de_manteniemiento;
+    }
+     
+     
+     public void aire(){
+ System.out.println("COMPOSICION DEL AIRE 78%");
+ System.out.println("NITROGENO 21%"
+         + "OXIGENO -109,3°F"+"VAPOR DE AGUA 1%");
+ 
+  System.out.println();
+		    
+     
+     }
+     public void agua(){
+
+ System.out.println("GRAMOS DE SAL 30-40 POR LITRO DE AGUA");
+		         
+    System.out.println();  
+     }
+     public void nitrogeno(){
+  
+ System.out.println("-------METODO DE CONGELACION--------");
+ System.out.println();
+ System.out.println("METODO EVAPORADOR 480 SEG");
+ System.out.println("METODO COMPRESOR 600 SEG ");
+     
+     }
+}
+--------
+public class Productos_frescos extends Productos{
+
+    public Productos_frescos() {
+        
+    }
+    public void ProducFrescos(){
+             System.out.println("Produsctos congelados");
+        System.out.println("12/10/2015");
+         System.out.println("12/12/2015");
+          System.out.println("67");
+           System.out.println("Ecuador"); 
+    
+    }
+}
+--------
+public class Productos_refrigerados extends Productos {
+     private int organico;
+      private double temperatura_de_mantenimiento;
+
+    public Productos_refrigerados() {
+        
+    }
+ public void ProducRefrigerados(){
+             System.out.println("PRODUCTOS REFREIGERADOS");
+        System.out.println("12/10/2015");
+         System.out.println("12/12/2015");
+          System.out.println("67");
+           System.out.println("Ecuador"); 
+    
+    }
+    public int getOrganico() {
+        return organico;
+    }
+
+    public void setOrganico(int organico) {
+        this.organico = organico;
+    }
+
+    public double getTemperatura_de_mantenimiento() {
+        return temperatura_de_mantenimiento;
+    }
+
+    public void setTemperatura_de_mantenimiento(double temperatura_de_mantenimiento) {
+        this.temperatura_de_mantenimiento = temperatura_de_mantenimiento;
+    }
+      
+      
+}
+
+
+    
+    
+    
+    
+}
