@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Deber-2 by mafer99</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Deber-2</h1>
+        <h2>Alvarado Daniela, Chilan Maria, Rosado Janina, Rodriguez Luis, Chichande Kendra</h2>
+        <a href="https://github.com/mafer99/deber-2" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="deber-2" class="anchor" href="#deber-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>deber-2</h1>
+
+<p>package Deber2;
+import java.time.Clock;
+import sun.util.calendar.BaseCalendar.Date;</p>
+
+<p>public class Productos {
+    private Date FechaDeEmbasado;
+     private  Date FechaDeCaduidad;
+      private int NumeroDeLote;
+       private String PaisDeOrigen;</p>
+
+<pre><code>public Productos() {
+}
+
+
+
+
+public Date getDechaDeEmbasado() {
+    return FechaDeEmbasado;
+}
+
+public void setDechaDeEmbasado(Date DechaDeEmbasado) {
+    this.FechaDeEmbasado = DechaDeEmbasado;
+}
+
+public Date getFechaDeCaduidad() {
+    return FechaDeCaduidad;
+}
+
+public void setFechaDeCaduidad(Date FechaDeCaduidad) {
+    this.FechaDeCaduidad = FechaDeCaduidad;
+}
+
+public int getNumeroDeLote() {
+    return NumeroDeLote;
+}
+
+public void setNumeroDeLote(int NumeroDeLote) {
+    this.NumeroDeLote = NumeroDeLote;
+}
+
+public String getPaisDeOrigen() {
+    return PaisDeOrigen;
+}
+
+public void setPaisDeOrigen(String PaisDeOrigen) {
+    this.PaisDeOrigen = PaisDeOrigen;
+}
+
+
+public static void main(String[] args) { 
+     Productos_frescos profres= new Productos_frescos();
+     profres.ProducFrescos();
+
+      System.out.println("");
+
+      Productos_refrigerados prorefri = new Productos_refrigerados();
+      prorefri.ProducRefrigerados();
+
+    Productos_congelados conge1= new Productos_congelados();
+     conge1.agua();
+     conge1.aire();
+     conge1.nitrogeno();
+     conge1.productosCongelados();
+     System.out.println("");
+
+
+
+}
+</code></pre>
+
+<h2>
+<a id="" class="anchor" href="#" aria-hidden="true"><span class="octicon octicon-link"></span></a>}</h2>
+
+<p>public class Productos_congelados extends Productos {
+     private double temperatura_de_manteniemiento;</p>
+
+<pre><code>public Productos_congelados() {
+}
+</code></pre>
+
+<p>public void productosCongelados(){
+         System.out.println("Produsctos congelados");
+        System.out.println("12/10/2015");
+         System.out.println("12/12/2015");
+          System.out.println("67");
+           System.out.println("Ecuador"); </p>
+
+<p>}
+    public Productos_congelados(double temperatura_de_manteniemiento) {
+        this.temperatura_de_manteniemiento = temperatura_de_manteniemiento;
+    }</p>
+
+<pre><code> public void aire(){
+</code></pre>
+
+<p>System.out.println("COMPOSICION DEL AIRE 78%");
+ System.out.println("NITROGENO 21%"
+         + "OXIGENO -109,3°F"+"VAPOR DE AGUA 1%");</p>
+
+<p>System.out.println();</p>
+
+<pre><code> }
+ public void agua(){
+</code></pre>
+
+<p>System.out.println("GRAMOS DE SAL 30-40 POR LITRO DE AGUA");</p>
+
+<pre><code>System.out.println();  
+ }
+ public void nitrogeno(){
+</code></pre>
+
+<p>System.out.println("-------METODO DE CONGELACION--------");
+ System.out.println();
+ System.out.println("METODO EVAPORADOR 480 SEG");
+ System.out.println("METODO COMPRESOR 600 SEG ");</p>
+
+<pre><code> }
+</code></pre>
+
+<h2>
+<a id="-1" class="anchor" href="#-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>}</h2>
+
+<p>public class Productos_frescos extends Productos{</p>
+
+<pre><code>public Productos_frescos() {
+
+}
+public void ProducFrescos(){
+         System.out.println("Produsctos congelados");
+    System.out.println("12/10/2015");
+     System.out.println("12/12/2015");
+      System.out.println("67");
+       System.out.println("Ecuador"); 
+
+}
+</code></pre>
+
+<h2>
+<a id="-2" class="anchor" href="#-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>}</h2>
+
+<p>public class Productos_refrigerados extends Productos {
+     private int organico;
+      private double temperatura_de_mantenimiento;</p>
+
+<pre><code>public Productos_refrigerados() {
+
+}
+</code></pre>
+
+<p>public void ProducRefrigerados(){
+             System.out.println("PRODUCTOS REFREIGERADOS");
+        System.out.println("12/10/2015");
+         System.out.println("12/12/2015");
+          System.out.println("67");
+           System.out.println("Ecuador"); </p>
+
+<pre><code>}
+public int getOrganico() {
+    return organico;
+}
+
+public void setOrganico(int organico) {
+    this.organico = organico;
+}
+
+public double getTemperatura_de_mantenimiento() {
+    return temperatura_de_mantenimiento;
+}
+
+public void setTemperatura_de_mantenimiento(double temperatura_de_mantenimiento) {
+    this.temperatura_de_mantenimiento = temperatura_de_mantenimiento;
+}
+</code></pre>
+
+<p>}</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/mafer99/deber-2/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/mafer99/deber-2/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/mafer99/deber-2"></a> is maintained by <a href="https://github.com/mafer99">mafer99</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
