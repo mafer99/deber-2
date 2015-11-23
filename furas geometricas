@@ -1,0 +1,162 @@
+package deber3;
+
+public class FigurasGeometricas {
+double altura;
+double base;
+double area;
+
+    public double getArea() {
+        return area;
+    }
+
+    public void setArea(double area) {
+        this.area = area;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+
+    public double getBase() {
+        return base;
+    }
+
+    public void setBase(double base) {
+        this.base = base;
+    }
+
+    public FigurasGeometricas(double altura, double base, double area) {
+        this.altura = altura;
+        this.base = base;
+        this.area = area;
+    
+}
+
+    public FigurasGeometricas() {
+    }
+
+    public FigurasGeometricas(double altura, double base) {
+        this.altura = altura;
+        this.base = base;
+    }
+
+    public static void main(String[] args) {
+         System.out.println("************************************");
+        System.out.println("RESULTADO DE LAS AREAS ");
+   //area de triangulo
+        Triangulo triangulo=new Triangulo(35, 10);
+    triangulo.areaTriangulo();
+    System.out.println("----------------------------------------------");
+        System.out.println("TRIANGULO CON ALTURA 35 Y BASE 10= " + triangulo.getArea());
+        
+        // area de cuadrado
+        Cuadrado cuadrado=new Cuadrado(30);
+        cuadrado.areaCuadrado();
+    System.out.println("----------------------------------------------");
+        System.out.println("CUADRADO CON LADO 30 = " + cuadrado.getArea());
+        
+        
+        //area circulo
+        Circulo circulo=new Circulo(46);
+        circulo.areaCirculo();
+        System.out.println("----------------------------------------------");
+        System.out.println("CIRCULO CON PI 46 = " + circulo.getArea());
+        
+        //area de un rectagunlo 
+         Rectangulo rectangulo= new Rectangulo(20, 15);
+             rectangulo.areaRectangulo();
+        System.out.println("----------------------------------------------");
+        System.out.println("RECTANGULO CON ALTURA 20 Y BASE 15 = " + rectangulo.getArea());     
+    }
+ 
+    
+   
+}
+
+    -------------------
+    public class Triangulo extends FigurasGeometricas{
+  
+   
+    public Triangulo(double altura, double base) {
+        super(altura, base);
+    }
+ public void areaTriangulo(){
+    Triangulo tria=new Triangulo(altura, base);
+    area=base*altura/2;
+}
+
+ 
+    }
+-------------------
+public class Rectangulo extends FigurasGeometricas{
+
+    public Rectangulo(double altura, double base) {
+        super(altura, base);
+    }
+    
+    public void areaRectangulo(){
+        Rectangulo rectangulo = new Rectangulo(altura , base);
+        area=altura*base;
+    }
+}
+----------------
+public class Cuadrado extends FigurasGeometricas{
+private int lado;
+private int lado2;
+
+    
+
+
+    public int getLado() {
+        return lado;
+    }
+
+    public void setLado(int lado) {
+        this.lado = lado;
+    }
+
+    public Cuadrado(int lado) {
+        this.lado = lado;
+        
+    }
+
+    
+    public void areaCuadrado(){
+       area=lado*lado;
+        
+    }
+}
+----------------
+public class Circulo extends FigurasGeometricas{
+private double radio;
+static final double pi=3.1416;
+
+    public double getRadio() {
+        return radio;
+    }
+
+    public void setRadio(double radio) {
+        this.radio = radio;
+    }
+
+    public Circulo(double radio) {
+        this.radio = radio;
+    }
+
+   
+    public void areaCirculo(){
+        area=pi*radio*radio;
+    }
+}
+
+    
+   
+
+   
+
+
+    
